@@ -13,4 +13,3 @@ for opers in product(operators, repeat=len(operands)-1):
     formula = ' '.join(formula)
     if int(eval(formula)) == c:
         print('{} = {}'.format(formula, eval(formula)))
-    
