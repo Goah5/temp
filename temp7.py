@@ -1,1 +1,1 @@
-print(s := input(), *[i[::-1] for i in s.split()[::-1]])
+print(s := input(), s[::-1])
