@@ -3,15 +3,14 @@ import time
 
 
 def txpo1(n: int):
-	p = []
+	yield n
 	while n != 1:
-		p.append(n)
 		if n % 2 == 0:
 			n = n // 2
 		else:
 			n = (n * 3) + 1
-	p.append(1)  # ± 1
-	return p
+		yield n
+
 
 def txpo2(num):
 	class FoundCyclicalPattern(Exception):
@@ -34,7 +33,7 @@ def txpo3(x):
 	return (1,)
 
 
-a = 10**(3*500)
+a = 10**(3*50)
 
 FList = [txpo1, txpo2, txpo3]
 for n, f in enumerate(FList, start=1):
